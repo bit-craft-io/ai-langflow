@@ -1,4 +1,4 @@
-# ai-langflow-cloud
+# ai-langflow
 
 Langflowを中核としたAIエージェント（音声対話）スタックのリポジトリ。<br />オンプレミス構築とAWS移行構成の2系統で構成される。
 
