@@ -1,0 +1,71 @@
+# on-premises/server/docker-compose.yaml のAWS版。
+# EC2上でdocker composeを継続する前提（cloud/docs/assumptions.md参照）で、以下を変更している:
+#   - langflow-init を廃止（データディレクトリのchownをEC2側のuser-dataで実施、cloud/terraform/modules/ec2_docker_host参照）
+#   - ./langflow/agents のホストbindマウントを、EC2起動時にS3からsyncしたディレクトリへのbindマウントに変更
+#     （on-premisesと同じ langflowai/langflow:1.11.0 イメージをそのまま使い、カスタムイメージのビルドは不要にしている）
+#   - opensearch / opensearch-ui は含まない。RAGのベクトルストアはpgvector(RDS)を使う方針に変更したため
+#     （devのenvs/dev/pgvector.tf参照。prod側への追加は別途対応）
+#   - firecrawl-api / playwright-serviceは含まない（移行対象外。docs/rules/0001-aws-migration.md「スコープ外」参照）
+#   - LANGFLOW_DATABASE_URL を SQLite から RDS PostgreSQL に変更（docs/rules/0001-aws-migration.md の指示）
+#   - LANGFLOW_API_KEY / GOOGLE_API_KEY 等を .env ファイル経由で注入（EC2起動時にSecrets Managerから取得して生成、平文コミットはしない）
+#   - ローカルLLM(LM Studio)は廃止。langflowはCloud LLM単独フロー("gemini"フロー、ADR-0003)を使う前提とし、
+#     bridgeには LANGFLOW_FLOW_ID=gemini を明示的に指定する（既存コードの変更は不要、環境変数のみで切り替え可能。ADR-0009/0010参照）
+
+services:
+  voicevox:
+    image: voicevox/voicevox_engine:cpu-latest
+    container_name: voicevox
+    restart: always
+    networks:
+      - nw_langflow
+
+  langflow:
+    image: langflowai/langflow:1.11.0
+    container_name: langflow
+    restart: always
+    environment:
+      - LANGFLOW_SSRF_ALLOWED_HOSTS=172.16.0.0/12,192.168.0.0/16
+      - LANGFLOW_DATABASE_URL=${LANGFLOW_DATABASE_URL}
+      - LANGFLOW_AUTO_LOGIN=True
+      - LANGFLOW_SUPERUSER=root
+      - LANGFLOW_SUPERUSER_PASSWORD=${LANGFLOW_SUPERUSER_PASSWORD}
+      - LANGFLOW_API_KEY_SOURCE=env
+      - LANGFLOW_API_KEY=${LANGFLOW_API_KEY}
+      - LANGFLOW_LOAD_FLOWS_PATH=/app/flows
+      - LANGFLOW_SKIP_AUTH_AUTO_LOGIN=true
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      # flow側(GoogleGenerativeAIComponent)がapi_keyをload_from_db(Global Variables)経由で
+      # 参照するため、コンテナ環境変数GOOGLE_API_KEYをLangflow起動時にGlobal Variablesへ
+      # 自動インポートさせる指定。これが無いと上のGOOGLE_API_KEYはコンテナ内には存在するが
+      # Langflow側では未認識のまま（起動時の1回のみインポートされる点に注意）。
+      # 一度Global Variablesに取り込まれると、.envの値を後から変更してもrestart/recreateでは
+      # 上書きされない（既にDBに存在する変数は再インポートされない仕様のため）。
+      # ここ（prod）はLANGFLOW_DATABASE_URLがRDS PostgreSQL（EC2/Dockerの外側）なので、
+      # `docker compose down -v`はもちろんEC2側の再作成でも一切リセットされない。
+      # 更新する場合はLangflow UI（設定 > Global Variables）から直接編集するか、
+      # RDSに接続してvariableテーブルの該当行を削除/更新する。
+      - LANGFLOW_VARIABLES_TO_GET_FROM_ENVIRONMENT=GOOGLE_API_KEY
+    volumes:
+      - /opt/agent/langflow-data:/app/data # EC2ローカルディスク（ec2_docker_hostのuser-dataで権限初期化済み）
+      - /opt/agent/langflow-agents:/app/flows # S3からsync済み（on-premisesの ./langflow/agents:/app/flows 相当）
+    networks:
+      - nw_langflow
+
+  bridge:
+    image: ${BRIDGE_IMAGE}
+    container_name: bridge
+    restart: always
+    ports:
+      - "8765:8765"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - VOICEVOX_URL=http://voicevox:50021
+      - LANGFLOW_BASE_URL=http://langflow:7860
+      - LANGFLOW_API_KEY=${LANGFLOW_API_KEY}
+      - LANGFLOW_FLOW_ID=gemini # ローカルLLM(LM Studio)廃止に伴い、Cloud LLM単独フローに固定（要確認事項なし、ユーザー回答済み）
+    networks:
+      - nw_langflow
+
+networks:
+  nw_langflow:
+    external: true

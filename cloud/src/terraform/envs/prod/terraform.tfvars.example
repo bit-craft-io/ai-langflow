@@ -1,0 +1,15 @@
+# cp terraform.tfvars.example terraform.tfvars してから値を編集すること。
+# terraform.tfvars自体はシークレットを含まないが、リポジトリにコミットする場合は内容を確認すること。
+
+aws_region = "ap-northeast-1"
+
+# S3バケット名はグローバルに一意である必要がある。AWSアカウントIDを含める等して衝突を避けること。
+deploy_bucket_name = "CHANGE_ME-agent-prod-deploy"
+
+# 独自ドメイン・TLSを使う場合はACM証明書ARNを指定する（未確認事項、cloud/docs/assumptions.md「B.」参照）。
+# 空文字のままの場合、ALBはHTTPのみで待ち受ける。
+certificate_arn = ""
+
+# voicevox/langflow/bridge/opensearch/opensearch-uiを1台に同居させるサイジング。
+# 要件に応じて見直すこと（cloud/docs/assumptions.md「C.」参照）。
+instance_type = "t3.large"

@@ -1,0 +1,124 @@
+# docker-compose.agent.yaml のdev版。envs/prodとの差分:
+#   - bridge: prodと同じくECRにpushした既成イメージを image: で参照する。
+#     【要手動作業】on-premises/server/bridge/backendをdocker buildしてECRにpushしておくこと
+#     （cloud/scripts/build_and_push_bridge.sh参照）。イメージ更新後はEC2上で
+#     `docker compose -p agent -f docker-compose.agent.yaml --env-file .env pull bridge && \
+#      docker compose -p agent -f docker-compose.agent.yaml --env-file .env up -d bridge`
+#     を実行する（自動化はしない。CI/CDパイプラインは今回のスコープ外、cloud/docs/assumptions.md「8.」参照）。
+#   - langflow: prodはRDS for PostgreSQLを使うが、devは動作確認用途のためSQLiteのまま使う
+#     （on-premisesと同じ`sqlite:////app/data/langflow.db`。ADR-0013参照、cloud/docs/assumptions.md「F.」参照）。
+#     PostgreSQLへの移行検証はenvs/prod（本番構成）側で行う。
+#   - langflow: Google Generative AIコンポーネントのモデル一覧取得にgoogle-generativeaiパッケージが必要なため、
+#     langflowai/langflow:1.11.0にpip installしたカスタムイメージ（cloud/docker/langflow/Dockerfile、
+#     cloud/scripts/build_and_push_langflow.sh参照）をECR経由でpullする。LANGFLOW_IMAGE未設定時は
+#     素の公式イメージにフォールバックする。
+#   - voicevox: Docker Hubからの毎回pullが遅いため、公式イメージ(voicevox/voicevox_engine:cpu-latest)を
+#     そのままECRへミラーしたものをpullする（cloud/scripts/build_and_push_voicevox.sh参照）。
+#     VOICEVOX_IMAGE未設定時は素のDocker Hubイメージにフォールバックする。
+# それ以外の内容はdocker-compose.agent.yamlと同一。変更する場合は両ファイルに反映すること。
+
+services:
+  voicevox:
+    image: ${VOICEVOX_IMAGE:-voicevox/voicevox_engine:cpu-latest}
+    container_name: voicevox
+    restart: always
+    networks:
+      - nw_langflow
+
+  langflow:
+    image: ${LANGFLOW_IMAGE:-langflowai/langflow:1.11.0}
+    container_name: langflow
+    ports:
+      - "7860:7860"
+    restart: always
+    environment:
+      - LANGFLOW_SSRF_ALLOWED_HOSTS=172.16.0.0/12,192.168.0.0/16
+      - LANGFLOW_DATABASE_URL=sqlite:////app/data/langflow.db
+      - LANGFLOW_AUTO_LOGIN=True
+      - LANGFLOW_SUPERUSER=root
+      - LANGFLOW_SUPERUSER_PASSWORD=${LANGFLOW_SUPERUSER_PASSWORD}
+      - LANGFLOW_API_KEY_SOURCE=env
+      - LANGFLOW_API_KEY=${LANGFLOW_API_KEY}
+      - LANGFLOW_LOAD_FLOWS_PATH=/app/flows
+      - LANGFLOW_SKIP_AUTH_AUTO_LOGIN=true
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      # flow側(GoogleGenerativeAIComponent)がapi_keyをload_from_db(Global Variables)経由で
+      # 参照するため、コンテナ環境変数GOOGLE_API_KEYをLangflow起動時にGlobal Variablesへ
+      # 自動インポートさせる指定。これが無いと上のGOOGLE_API_KEYはコンテナ内には存在するが
+      # Langflow側では未認識のまま（起動時の1回のみインポートされる点に注意）。
+      # 一度Global Variablesに取り込まれると、.envの値を後から変更してもrestart/recreateでは
+      # 上書きされない（既にDBに存在する変数は再インポートされない仕様のため）。
+      # ここ（dev）はLANGFLOW_DATABASE_URLがsqlite:////app/data/langflow.dbで、実体はEC2ホストの
+      # /opt/agent/langflow-dataへのbind mount。bind mountは`docker compose down -v`の対象外なので
+      # コンテナを作り直しても直らない。更新する場合は
+      #   docker compose down && rm -f /opt/agent/langflow-data/langflow.db && docker compose up -d
+      # のようにDBファイル自体を消す（ディレクトリごとではなくファイルのみ削除。パーミッション崩れ防止）。
+      - LANGFLOW_VARIABLES_TO_GET_FROM_ENVIRONMENT=GOOGLE_API_KEY
+      - LANGFLOW_SECRET_KEY=${LANGFLOW_SECRET_KEY}
+    volumes:
+      - /opt/agent/langflow-data:/app/data # EC2ローカルディスク（ec2_docker_hostのuser-dataで権限初期化済み）
+      - /opt/agent/langflow-agents:/app/flows # S3からsync済み（on-premisesの ./langflow/agents:/app/flows 相当）
+    networks:
+      - nw_langflow
+
+  bridge:
+    image: ${BRIDGE_IMAGE}
+    container_name: bridge
+    restart: always
+    ports:
+      - "8765:8765"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - VOICEVOX_URL=http://voicevox:50021
+      - LANGFLOW_BASE_URL=http://langflow:7860
+      - LANGFLOW_API_KEY=${LANGFLOW_API_KEY}
+      # terraform側(ec2_docker_hostモジュールのlangflow_flow_id変数)が/opt/agent/.envに
+      # LANGFLOW_FLOW_IDを書き出す。値はenvs/dev/compute.tfで指定（現在gemini-pg）。
+      - LANGFLOW_FLOW_ID=${LANGFLOW_FLOW_ID}
+    networks:
+      - nw_langflow
+
+#  opensearch:
+#    image: opensearchproject/opensearch:latest
+#    container_name: opensearch
+#    restart: always
+#    environment:
+#      - cluster.name=opensearch-cluster
+#      - node.name=opensearch-node
+#      - discovery.type=single-node
+#      - bootstrap.memory_lock=true
+#      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+#      - DISABLE_SECURITY_PLUGIN=true
+#    ulimits:
+#      memlock:
+#        soft: -1
+#        hard: -1
+#      nofile:
+#        soft: 65536
+#        hard: 65536
+#    healthcheck:
+#      test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health >/dev/null || exit 1"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 15
+#    volumes:
+#      - /opt/agent/opensearch-data:/usr/share/opensearch/data # EC2ローカルディスク（on-premisesのopensearch-data名前付きボリューム相当）
+#    networks:
+#      - nw_langflow
+#
+#  opensearch-ui:
+#    image: opensearchproject/opensearch-dashboards:3.8.0
+#    container_name: opensearch-ui
+#    restart: always
+#    environment:
+#      - OPENSEARCH_HOSTS=["http://opensearch:9200"]
+#      - DISABLE_SECURITY_DASHBOARDS_PLUGIN=true
+#    depends_on:
+#      opensearch:
+#        condition: service_healthy
+#    networks:
+#      - nw_langflow
+
+networks:
+  nw_langflow:
+    external: true
