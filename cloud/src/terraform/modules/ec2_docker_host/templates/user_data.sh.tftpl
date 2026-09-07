@@ -1,0 +1,85 @@
+#!/bin/bash
+# EC2上でon-premisesのdocker compose構成を継続稼働させるためのブートストラップ。
+# cloud/docs/assumptions.md 前提2（EC2 + docker compose）に基づく。
+# firecrawl-api / playwright-serviceは移行対象外（docs/rules/0001-aws-migration.md「スコープ外」）のため、
+# voicevox/langflow/bridge/opensearch/opensearch-uiを起動する。
+set -eux
+
+dnf install -y docker jq
+systemctl enable --now docker
+
+DOCKER_CONFIG_DIR=/usr/local/lib/docker/cli-plugins
+mkdir -p "$DOCKER_CONFIG_DIR"
+curl -sSL "https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64" \
+  -o "$DOCKER_CONFIG_DIR/docker-compose"
+chmod +x "$DOCKER_CONFIG_DIR/docker-compose"
+
+curl -sSL "https://github.com/docker/buildx/releases/download/v0.17.1/buildx-v0.17.1.linux-amd64" \
+  -o "$DOCKER_CONFIG_DIR/docker-buildx"
+chmod +x "$DOCKER_CONFIG_DIR/docker-buildx"
+
+# --- 永続化ディレクトリ（ADR-0006, on-premisesのlangflow-initを代替）---
+# on-premisesの名前付きvolume(langflow-data/opensearch-data)相当を、EC2ローカルディスク上の
+# ディレクトリへのbindマウントとして再現する（EFS等マネージドストレージへの切り出しはADR上の根拠がないため採用しない）。
+mkdir -p /opt/agent/langflow-data /opt/agent/opensearch-data
+chown -R 1000:0 /opt/agent/langflow-data
+chown -R 1000:1000 /opt/agent/opensearch-data
+
+# --- ADR-0008相当: 外部ネットワーク（本構成ではagent composeプロジェクトのみが参加）---
+docker network inspect nw_langflow >/dev/null 2>&1 || docker network create nw_langflow
+
+%{ if bridge_image != "" || langflow_image != "" || voicevox_image != "" }
+# --- ECRログイン（bridge/langflow/voicevoxとも同じアカウント/リージョンのレジストリのため1回でよい）---
+ECR_REGISTRY=$(echo "${bridge_image != "" ? bridge_image : (langflow_image != "" ? langflow_image : voicevox_image)}" | cut -d/ -f1)
+aws ecr get-login-password --region "${aws_region}" | docker login --username AWS --password-stdin "$ECR_REGISTRY"
+%{ endif }
+
+# --- デプロイ成果物（compose定義 + langflow flows）取得 ---
+mkdir -p /opt/agent /opt/agent/langflow-agents
+cd /opt/agent
+aws s3 cp "s3://${deploy_bucket_name}/docker-compose.agent.yaml" ./docker-compose.agent.yaml
+aws s3 sync "s3://${deploy_bucket_name}/langflow-flows/" /opt/agent/langflow-agents/ --delete
+
+secret_string() { aws secretsmanager get-secret-value --region "${aws_region}" --secret-id "$1" --query SecretString --output text; }
+secret_json_field() { secret_string "$1" | jq -r ".$2"; }
+
+LANGFLOW_API_KEY=$(secret_string "${langflow_api_key_secret_arn}")
+GOOGLE_API_KEY=$(secret_string "${google_api_key_secret_arn}")
+LANGFLOW_SUPERUSER_PASSWORD=$(secret_string "${langflow_superuser_password_secret_arn}")
+
+%{ if rds_langflow_master_secret_arn != "" }
+RDS_LANGFLOW_USERNAME=$(secret_json_field "${rds_langflow_master_secret_arn}" username)
+RDS_LANGFLOW_PASSWORD=$(secret_json_field "${rds_langflow_master_secret_arn}" password)
+%{ endif }
+
+cat > /opt/agent/.env <<EOF
+%{ if bridge_image != "" }
+BRIDGE_IMAGE=${bridge_image}
+%{ endif }
+%{ if langflow_image != "" }
+LANGFLOW_IMAGE=${langflow_image}
+%{ endif }
+%{ if voicevox_image != "" }
+VOICEVOX_IMAGE=${voicevox_image}
+%{ endif }
+%{ if langflow_flow_id != "" }
+LANGFLOW_FLOW_ID=${langflow_flow_id}
+%{ endif }
+
+LANGFLOW_API_KEY=$LANGFLOW_API_KEY
+GOOGLE_API_KEY=$GOOGLE_API_KEY
+LANGFLOW_SUPERUSER_PASSWORD=$LANGFLOW_SUPERUSER_PASSWORD
+%{ if langflow_secret_key != "" }
+LANGFLOW_SECRET_KEY=${langflow_secret_key}
+%{ endif }
+%{ if rds_langflow_master_secret_arn != "" }
+LANGFLOW_DATABASE_URL=postgresql://$RDS_LANGFLOW_USERNAME:$RDS_LANGFLOW_PASSWORD@${rds_langflow_host}:${rds_langflow_port}/${rds_langflow_dbname}
+%{ endif }
+EOF
+chmod 600 /opt/agent/.env
+
+cd /opt/agent
+# bridge_imageが空の場合、compose定義のbridgeサービスは image ではなく build を使う運用
+# （cloud/docs/assumptions.md「E.」参照）。その場合はビルド元のソースを事前に手動でclone/pullしておくこと。
+# 未clone状態でこのスクリプトが初回実行されるとbridgeのみ起動に失敗するが、他サービスは起動する。
+docker compose -p agent -f docker-compose.agent.yaml --env-file .env up -d

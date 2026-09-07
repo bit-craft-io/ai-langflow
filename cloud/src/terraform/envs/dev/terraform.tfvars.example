@@ -1,0 +1,20 @@
+# cp terraform.tfvars.example terraform.tfvars してから値を編集すること。
+# terraform.tfvars自体はシークレットを含まないが、リポジトリにコミットする場合は内容を確認すること。
+
+aws_region = "ap-northeast-1"
+
+# 【要設定】ALBを使わずEC2に直接接続する構成のため、bridgeポート(8765)への接続元を明示的に絞る。
+# 0.0.0.0/0にはしないこと。開発者の自宅/オフィスの固定グローバルIP等を指定する。
+dev_client_cidr_blocks = ["CHANGE_ME.CHANGE_ME.CHANGE_ME.CHANGE_ME/32"]
+
+# deploy_bucket_name / bridge_imageはterraform側でaws_caller_identity/module.ecrから自動算出するため
+# ここでの指定は不要（cloud/scripts/build_and_push_bridge.shで事前にECRへpushしておくことは変わらず必要）。
+
+# voicevox/langflow/bridge/opensearch/opensearch-uiを1台に同居させるサイジング。
+# 動作確認用途のみのためt3.small（ADR-0012参照）。5サービス同時稼働でOOMする場合はt3.medium/t3.largeへ
+# 引き上げること（cloud/docs/assumptions.md「C.」参照）。
+instance_type = "t3.small"
+
+# 【要設定】Langflowの暗号化保存用固定キー。空だとコンテナ作り直しの度にランダム生成され、
+# 既存の暗号化済み値（グローバル変数等）が読めなくなるため、適当な固定値を設定すること。
+langflow_secret_key = "CHANGE_ME"
