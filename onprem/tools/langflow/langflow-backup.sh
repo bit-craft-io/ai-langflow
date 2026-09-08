@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage: tools/langflow-backup.sh [VOLUME_NAME] [BACKUP_DIR]
+# Usage: tools/langflow-backup.sh [VOLUME_NAME] [BACKUP_ROOT]
+#   ${BACKUP_ROOT}/history/YYYYMMDD_HHMMSS/ にバックアップを作成し、
+#   ${BACKUP_ROOT}/latest を最新のバックアップへのシンボリックリンクとして更新する
 VOLUME="${1:-langflow-data}"
-BACKUP_DIR="${2:-$(pwd)/backup}"
+BACKUP_ROOT="${2:-$(pwd)/backup}"
+TIMESTAMP="$(date +%Y%m%d_%H%M%S)"
+BACKUP_DIR="${BACKUP_ROOT}/history/${TIMESTAMP}"
 
 mkdir -p "$BACKUP_DIR"
 
@@ -22,4 +26,7 @@ if [ -f "${BACKUP_DIR}/langflow.db" ]; then
 fi
 
 du -sh "${BACKUP_DIR}"/* 2>/dev/null || true
+
+ln -sfn "history/${TIMESTAMP}" "${BACKUP_ROOT}/latest"
+echo "[backup] latest -> history/${TIMESTAMP}"
 echo "[backup] done"
