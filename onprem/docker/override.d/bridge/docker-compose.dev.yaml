@@ -1,0 +1,16 @@
+services:
+  bridge-frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    container_name: bridge-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - bridge
+    networks:
+      - sandbox
+
+networks:
+  sandbox:
+    external: true

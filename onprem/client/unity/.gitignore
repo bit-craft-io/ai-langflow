@@ -1,0 +1,3 @@
+backup
+# ggml-tiny.bin はサイズが大きいので省く
+init/Assets/StreamingAssets/Whisper/*

@@ -1,0 +1,7 @@
+import subprocess
+
+subprocess.run([
+    "powershell.exe",
+    "-Command",
+    "Set-AudioDevice -PlaybackMute $true"
+])

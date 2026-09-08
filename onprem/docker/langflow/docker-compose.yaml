@@ -1,0 +1,43 @@
+services:
+  langflow-init:
+    image: alpine
+    container_name: langflow-init
+    command: chown -R 1000:0 /app/data
+    volumes:
+      - langflow-data:/app/data
+
+  langflow:
+    image: langflowai/langflow:1.11.0
+    container_name: langflow
+    depends_on:
+      langflow-init:
+        condition: service_completed_successfully
+    ports:
+      - "7860:7860"
+    environment:
+      - LANGFLOW_SSRF_ALLOWED_HOSTS=host.docker.internal,172.16.0.0/12,192.168.0.0/16
+      - LANGFLOW_DATABASE_URL=sqlite:////app/data/langflow.db
+      - LANGFLOW_AUTO_LOGIN=True
+      - LANGFLOW_SUPERUSER=root
+      - LANGFLOW_SUPERUSER_PASSWORD=root
+      # コンテナ作成の都度、Langflow API Keys を再作成の手間を省く
+      - LANGFLOW_API_KEY_SOURCE=env
+      - LANGFLOW_API_KEY=${__LANGFLOW_API_KEY}
+      - LANGFLOW_LOAD_FLOWS_PATH=/app/flows
+      - LANGFLOW_SKIP_AUTH_AUTO_LOGIN=true
+      - GOOGLE_API_KEY=${__LANGFLOW_GOOGLE_API_KEY}
+      # フィールド名やタイプが一致するcomponent入力欄に自動で紐付け
+#      - LANGFLOW_VARIABLES_TO_GET_FROM_ENVIRONMENT=GOOGLE_API_KEY
+    volumes:
+      - langflow-data:/app/data
+      - ./flows:/app/flows
+    networks:
+      - sandbox
+
+networks:
+  sandbox:
+    external: true
+
+volumes:
+  langflow-data:
+    name: langflow-data
