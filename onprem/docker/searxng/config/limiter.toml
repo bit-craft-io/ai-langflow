@@ -1,0 +1,6 @@
+[botdetection.ip_limit]
+# リクエスト制限を無効化(ローカル利用のみなので問題なし)
+link_token = false
+
+[botdetection.ip_lists]
+# 必要なら自分のIPを許可リストに追加

@@ -1,0 +1,10 @@
+# docker-compose.override.yaml
+services:
+  searxng:
+    container_name: searxng
+    networks:
+      - sandbox
+
+networks:
+  sandbox:
+    external: true

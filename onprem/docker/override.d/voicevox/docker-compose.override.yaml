@@ -1,0 +1,10 @@
+# docker-compose.override.yaml
+services:
+  voicevox:
+    networks:
+      - voicevox_default
+      - sandbox
+
+networks:
+  sandbox:
+    external: true

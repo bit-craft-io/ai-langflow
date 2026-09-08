@@ -1,0 +1,23 @@
+services:
+  bridge:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    container_name: bridge
+    ports:
+      - "8765:8765"
+    env_file:
+      - backend/src/.env
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=1
+      - VOICEVOX_URL=http://voicevox:50021
+      - LANGFLOW_BASE_URL=http://langflow:7860
+      # langflow で設定している API_KEY
+      - LANGFLOW_API_KEY=${__LANGFLOW_API_KEY}
+    networks:
+      - bridge_default
+
+networks:
+  bridge_default:
+    driver: bridge

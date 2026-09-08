@@ -1,0 +1,10 @@
+# docker-compose.override.yaml
+services:
+  ollama-proxy:
+    networks:
+      - ollama_default
+      - sandbox
+
+networks:
+  sandbox:
+    external: true

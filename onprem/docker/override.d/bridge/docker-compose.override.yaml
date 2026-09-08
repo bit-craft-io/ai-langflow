@@ -1,0 +1,9 @@
+# docker-compose.override.yaml
+services:
+  bridge:
+    networks:
+      - sandbox
+
+networks:
+  sandbox:
+    external: true

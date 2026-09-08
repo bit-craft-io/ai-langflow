@@ -1,0 +1,18 @@
+# docker-compose.override.yaml
+services:
+  api:
+    container_name: firecrawl-api
+    networks:
+      - sandbox
+  rabbitmq:
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "check_running"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      # 5s では起動できない場合があるため延ばす
+      start_period: 30s
+
+networks:
+  sandbox:
+    external: true

@@ -1,0 +1,3575 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "FirecrawlCrawlApi",
+            "id": "CustomComponent-Jviu0",
+            "name": "data",
+            "output_types": [
+              "JSON"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "crawl_data",
+            "id": "CustomComponent-VqSim",
+            "inputTypes": [
+              "Data",
+              "JSON"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__CustomComponent-Jviu0{œdataTypeœ:œFirecrawlCrawlApiœ,œidœ:œCustomComponent-Jviu0œ,œnameœ:œdataœ,œoutput_typesœ:[œJSONœ]}-CustomComponent-VqSim{œfieldNameœ:œcrawl_dataœ,œidœ:œCustomComponent-VqSimœ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "CustomComponent-Jviu0",
+        "sourceHandle": "{œdataTypeœ:œFirecrawlCrawlApiœ,œidœ:œCustomComponent-Jviu0œ,œnameœ:œdataœ,œoutput_typesœ:[œJSONœ]}",
+        "target": "CustomComponent-VqSim",
+        "targetHandle": "{œfieldNameœ:œcrawl_dataœ,œidœ:œCustomComponent-VqSimœ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "FirecrawlResultsToDataList",
+            "id": "CustomComponent-VqSim",
+            "name": "data_list",
+            "output_types": [
+              "JSON"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "data_inputs",
+            "id": "SplitText-zabq1",
+            "inputTypes": [
+              "Data",
+              "JSON",
+              "DataFrame",
+              "Table",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__CustomComponent-VqSim{œdataTypeœ:œFirecrawlResultsToDataListœ,œidœ:œCustomComponent-VqSimœ,œnameœ:œdata_listœ,œoutput_typesœ:[œJSONœ]}-SplitText-zabq1{œfieldNameœ:œdata_inputsœ,œidœ:œSplitText-zabq1œ,œinputTypesœ:[œDataœ,œJSONœ,œDataFrameœ,œTableœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "CustomComponent-VqSim",
+        "sourceHandle": "{œdataTypeœ:œFirecrawlResultsToDataListœ,œidœ:œCustomComponent-VqSimœ,œnameœ:œdata_listœ,œoutput_typesœ:[œJSONœ]}",
+        "target": "SplitText-zabq1",
+        "targetHandle": "{œfieldNameœ:œdata_inputsœ,œidœ:œSplitText-zabq1œ,œinputTypesœ:[œDataœ,œJSONœ,œDataFrameœ,œTableœ,œMessageœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "CrawlerOptionsBuilder",
+            "id": "CustomComponent-p5H2s",
+            "name": "data_out",
+            "output_types": [
+              "JSON"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "crawlerOptions",
+            "id": "CustomComponent-Jviu0",
+            "inputTypes": [
+              "Data",
+              "JSON"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__CustomComponent-p5H2s{œdataTypeœ:œCrawlerOptionsBuilderœ,œidœ:œCustomComponent-p5H2sœ,œnameœ:œdata_outœ,œoutput_typesœ:[œJSONœ]}-CustomComponent-Jviu0{œfieldNameœ:œcrawlerOptionsœ,œidœ:œCustomComponent-Jviu0œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "CustomComponent-p5H2s",
+        "sourceHandle": "{œdataTypeœ:œCrawlerOptionsBuilderœ,œidœ:œCustomComponent-p5H2sœ,œnameœ:œdata_outœ,œoutput_typesœ:[œJSONœ]}",
+        "target": "CustomComponent-Jviu0",
+        "targetHandle": "{œfieldNameœ:œcrawlerOptionsœ,œidœ:œCustomComponent-Jviu0œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ScrapeOptionsBuilder",
+            "id": "CustomComponent-FA1Zj",
+            "name": "data_out",
+            "output_types": [
+              "JSON"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "scrapeOptions",
+            "id": "CustomComponent-Jviu0",
+            "inputTypes": [
+              "Data",
+              "JSON"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__CustomComponent-FA1Zj{œdataTypeœ:œScrapeOptionsBuilderœ,œidœ:œCustomComponent-FA1Zjœ,œnameœ:œdata_outœ,œoutput_typesœ:[œJSONœ]}-CustomComponent-Jviu0{œfieldNameœ:œscrapeOptionsœ,œidœ:œCustomComponent-Jviu0œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "CustomComponent-FA1Zj",
+        "sourceHandle": "{œdataTypeœ:œScrapeOptionsBuilderœ,œidœ:œCustomComponent-FA1Zjœ,œnameœ:œdata_outœ,œoutput_typesœ:[œJSONœ]}",
+        "target": "CustomComponent-Jviu0",
+        "targetHandle": "{œfieldNameœ:œscrapeOptionsœ,œidœ:œCustomComponent-Jviu0œ,œinputTypesœ:[œDataœ,œJSONœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "GlobalConfigRead",
+            "id": "GlobalConfigRead-Xl5b4",
+            "name": "value_out",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "url",
+            "id": "CustomComponent-Jviu0",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__GlobalConfigRead-Xl5b4{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-Xl5b4œ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-Jviu0{œfieldNameœ:œurlœ,œidœ:œCustomComponent-Jviu0œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GlobalConfigRead-Xl5b4",
+        "sourceHandle": "{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-Xl5b4œ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-Jviu0",
+        "targetHandle": "{œfieldNameœ:œurlœ,œidœ:œCustomComponent-Jviu0œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "GlobalConfigRead",
+            "id": "GlobalConfigRead-Z78Pl",
+            "name": "value_out",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "host",
+            "id": "CustomComponent-NggvI",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__GlobalConfigRead-Z78Pl{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-Z78Plœ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-NggvI{œfieldNameœ:œhostœ,œidœ:œCustomComponent-NggvIœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GlobalConfigRead-Z78Pl",
+        "sourceHandle": "{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-Z78Plœ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-NggvI",
+        "targetHandle": "{œfieldNameœ:œhostœ,œidœ:œCustomComponent-NggvIœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "GlobalConfigRead",
+            "id": "GlobalConfigRead-VWHn2",
+            "name": "value_out",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "table_name",
+            "id": "CustomComponent-NggvI",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__GlobalConfigRead-VWHn2{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-VWHn2œ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-NggvI{œfieldNameœ:œtable_nameœ,œidœ:œCustomComponent-NggvIœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GlobalConfigRead-VWHn2",
+        "sourceHandle": "{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-VWHn2œ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-NggvI",
+        "targetHandle": "{œfieldNameœ:œtable_nameœ,œidœ:œCustomComponent-NggvIœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "EmbeddingModel",
+            "id": "EmbeddingModel-ALHoa",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "CustomComponent-XT2SR",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__EmbeddingModel-ALHoa{œdataTypeœ:œEmbeddingModelœ,œidœ:œEmbeddingModel-ALHoaœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-CustomComponent-XT2SR{œfieldNameœ:œembeddingœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "EmbeddingModel-ALHoa",
+        "sourceHandle": "{œdataTypeœ:œEmbeddingModelœ,œidœ:œEmbeddingModel-ALHoaœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "CustomComponent-XT2SR",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "GlobalConfigRead",
+            "id": "GlobalConfigRead-vn09q",
+            "name": "value_out",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "host",
+            "id": "CustomComponent-XT2SR",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__GlobalConfigRead-vn09q{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-vn09qœ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-XT2SR{œfieldNameœ:œhostœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GlobalConfigRead-vn09q",
+        "sourceHandle": "{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-vn09qœ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-XT2SR",
+        "targetHandle": "{œfieldNameœ:œhostœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "GlobalConfigRead",
+            "id": "GlobalConfigRead-0tiP3",
+            "name": "value_out",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "table_name",
+            "id": "CustomComponent-XT2SR",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__GlobalConfigRead-0tiP3{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-0tiP3œ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-XT2SR{œfieldNameœ:œtable_nameœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GlobalConfigRead-0tiP3",
+        "sourceHandle": "{œdataTypeœ:œGlobalConfigReadœ,œidœ:œGlobalConfigRead-0tiP3œ,œnameœ:œvalue_outœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-XT2SR",
+        "targetHandle": "{œfieldNameœ:œtable_nameœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "SplitText",
+            "id": "SplitText-zabq1",
+            "name": "dataframe",
+            "output_types": [
+              "Table"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "chunks",
+            "id": "CustomComponent-XT2SR",
+            "inputTypes": [
+              "DataFrame",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__SplitText-zabq1{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-zabq1œ,œnameœ:œdataframeœ,œoutput_typesœ:[œTableœ]}-CustomComponent-XT2SR{œfieldNameœ:œchunksœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "SplitText-zabq1",
+        "sourceHandle": "{œdataTypeœ:œSplitTextœ,œidœ:œSplitText-zabq1œ,œnameœ:œdataframeœ,œoutput_typesœ:[œTableœ]}",
+        "target": "CustomComponent-XT2SR",
+        "targetHandle": "{œfieldNameœ:œchunksœ,œidœ:œCustomComponent-XT2SRœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "CustomComponent-Jviu0",
+          "node": {
+            "base_classes": [
+              "JSON"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Crawls a URL and returns the results.",
+            "display_name": "Firecrawl Crawl API",
+            "documentation": "https://docs.firecrawl.dev/v1/api-reference/endpoint/crawl-post",
+            "edited": true,
+            "field_order": [
+              "trigger",
+              "api_url",
+              "api_key",
+              "url",
+              "timeout",
+              "idempotency_key",
+              "crawlerOptions",
+              "scrapeOptions"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "fd4617fd58c8",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.0"
+                  },
+                  {
+                    "name": "firecrawl",
+                    "version": "4.32.0"
+                  }
+                ],
+                "total_dependencies": 2
+              },
+              "module": "custom_components.firecrawl_crawl_api"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "JSON",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "crawl",
+                "name": "data",
+                "options": null,
+                "required_inputs": null,
+                "selected": "JSON",
+                "tool_mode": true,
+                "types": [
+                  "JSON"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Firecrawl API Key",
+                "dynamic": false,
+                "info": "The API key to use Firecrawl API.",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "dummy"
+              },
+              "api_url": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Firecrawl API URL",
+                "dynamic": false,
+                "info": "Self-hosted Firecrawl instance URL. e.g. http://firecrowl-api:3002",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "api_url",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "http://firecrawl-api:3002"
+              },
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import re\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import DataInput, IntInput, MultilineInput, Output, SecretStrInput, StrInput\nfrom lfx.schema.data import Data\n\n_CAMEL_TO_SNAKE_RE = re.compile(r\"(?<!^)(?=[A-Z])\")\n\n\ndef _to_snake_case_kwargs(params: dict) -> dict:\n    \"\"\"Convert camelCase option keys to snake_case keyword arguments.\n\n    The firecrawl-py v1 convention uses camelCase, while the v2 SDK expects\n    snake_case keyword arguments. Keys that are already snake_case are passed\n    through unchanged.\n    \"\"\"\n    return {_CAMEL_TO_SNAKE_RE.sub(\"_\", key).lower(): value for key, value in params.items()}\n\n\nclass FirecrawlCrawlApi(Component):\n    display_name: str = \"Firecrawl Crawl API\"\n    description: str = \"Crawls a URL and returns the results.\"\n    name = \"FirecrawlCrawlApi\"\n\n    documentation: str = \"https://docs.firecrawl.dev/v1/api-reference/endpoint/crawl-post\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"trigger\",\n            display_name=\"Trigger (unused)\",\n            info=\"Chat Input接続用のダミー入力。値は実際の処理では使用しない。\",\n            required=False,\n        ),\n        StrInput(\n            name=\"api_url\",\n            display_name=\"Firecrawl API URL\",\n            required=False,\n            value=\"https://api.firecrawl.dev\",\n            info=\"Self-hosted Firecrawl instance URL. e.g. http://firecrowl-api:3002\",\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"Firecrawl API Key\",\n            required=True,\n            password=True,\n            info=\"The API key to use Firecrawl API.\",\n        ),\n        MultilineInput(\n            name=\"url\",\n            display_name=\"URL\",\n            required=True,\n            info=\"The URL to scrape.\",\n            tool_mode=True,\n        ),\n        IntInput(\n            name=\"timeout\",\n            display_name=\"Timeout\",\n            info=\"Timeout in milliseconds for the request.\",\n        ),\n        StrInput(\n            name=\"idempotency_key\",\n            display_name=\"Idempotency Key\",\n            info=\"Optional idempotency key to ensure unique requests.\",\n        ),\n        DataInput(\n            name=\"crawlerOptions\",\n            display_name=\"Crawler Options\",\n            info=\"The crawler options to send with the request.\",\n        ),\n        DataInput(\n            name=\"scrapeOptions\",\n            display_name=\"Scrape Options\",\n            info=\"The page options to send with the request.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"JSON\", name=\"data\", method=\"crawl\"),\n    ]\n    idempotency_key: str | None = None\n\n    def crawl(self) -> Data:\n        try:\n            from firecrawl import Firecrawl\n            from firecrawl.v2.types import ScrapeOptions\n        except ImportError as e:\n            msg = \"Could not import firecrawl integration package. Please install it with `pip install firecrawl-py`.\"\n            raise ImportError(msg) from e\n\n        params = dict(self.crawlerOptions.__dict__.get(\"data\", {})) if self.crawlerOptions else {}\n        scrape_options_dict = dict(self.scrapeOptions.__dict__.get(\"data\", {})) if self.scrapeOptions else {}\n\n        # Set default values for crawl parameters.\n        # Note: firecrawl-py v2 renamed several options. \"maxDepth\" -> \"max_discovery_depth\"\n        # and \"allowBackwardLinks\" -> \"crawl_entire_domain\".\n        params.setdefault(\"maxDepth\", 2)\n        params.setdefault(\"limit\", 10000)\n        params.setdefault(\"allowExternalLinks\", False)\n        params.setdefault(\"allowBackwardLinks\", False)\n        params.setdefault(\"ignoreQueryParameters\", False)\n\n        # Ensure onlyMainContent is explicitly set if not provided.\n        scrape_options_dict.setdefault(\"onlyMainContent\", True)\n\n        # Translate legacy v1 camelCase option names to the firecrawl-py v2 keyword args.\n        kwargs = _to_snake_case_kwargs(params)\n        if \"max_depth\" in kwargs:\n            kwargs[\"max_discovery_depth\"] = kwargs.pop(\"max_depth\")\n        if \"allow_backward_links\" in kwargs:\n            kwargs[\"crawl_entire_domain\"] = kwargs.pop(\"allow_backward_links\")\n        # v2 removed \"ignore_sitemap\"; it is now the \"sitemap\" mode enum.\n        if kwargs.pop(\"ignore_sitemap\", False):\n            kwargs[\"sitemap\"] = \"skip\"\n\n        # Build the typed ScrapeOptions object expected by v2 from the (snake_cased) dict.\n        scrape_kwargs = _to_snake_case_kwargs(scrape_options_dict)\n        kwargs[\"scrape_options\"] = ScrapeOptions(**scrape_kwargs)\n\n        # app = Firecrawl(api_key=self.api_key)\n        app = Firecrawl(api_key=self.api_key, api_url=self.api_url)\n        # v2 polls to completion and returns a typed CrawlJob object.\n        crawl_job = app.crawl(self.url, **kwargs)\n        return Data(data={\"results\": crawl_job.model_dump()})\n"
+              },
+              "crawlerOptions": {
+                "_input_type": "JSONInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Crawler Options",
+                "dynamic": false,
+                "info": "The crawler options to send with the request.",
+                "input_types": [
+                  "Data",
+                  "JSON"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "crawlerOptions",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "idempotency_key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Idempotency Key",
+                "dynamic": false,
+                "info": "Optional idempotency key to ensure unique requests.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "idempotency_key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "scrapeOptions": {
+                "_input_type": "JSONInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Scrape Options",
+                "dynamic": false,
+                "info": "The page options to send with the request.",
+                "input_types": [
+                  "Data",
+                  "JSON"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "scrapeOptions",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "timeout": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Timeout",
+                "dynamic": false,
+                "info": "Timeout in milliseconds for the request.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "timeout",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 0
+              },
+              "trigger": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Trigger (unused)",
+                "dynamic": false,
+                "info": "Chat Input接続用のダミー入力。値は実際の処理では使用しない。",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "trigger",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "url": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "ai_enabled": false,
+                "api_editable": false,
+                "copy_field": false,
+                "display_name": "URL",
+                "dynamic": false,
+                "info": "The URL to scrape.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "url",
+                "override_skip": false,
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "https://www.city.ishigaki.okinawa.jp/index.html"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "FirecrawlCrawlApi"
+        },
+        "dragging": false,
+        "id": "CustomComponent-Jviu0",
+        "measured": {
+          "height": 704,
+          "width": 320
+        },
+        "position": {
+          "x": -381.8667843136515,
+          "y": 710.4304904240655
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-VqSim",
+          "node": {
+            "base_classes": [
+              "JSON"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "display_name": "Firecrawl → Data List",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "crawl_data"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "a95288da6478",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.firecrawl__data_list"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Data List",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "convert",
+                "name": "data_list",
+                "options": null,
+                "required_inputs": null,
+                "selected": "JSON",
+                "tool_mode": true,
+                "types": [
+                  "JSON"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.custom.custom_component.component import Component\r\nfrom lfx.io import DataInput, Output\r\nfrom lfx.schema.data import Data\r\n\r\n\r\nclass FirecrawlResultsToDataList(Component):\r\n    display_name = \"Firecrawl → Data List\"\r\n    inputs = [DataInput(name=\"crawl_data\", display_name=\"Crawl Data\")]\r\n    outputs = [Output(display_name=\"Data List\", name=\"data_list\", method=\"convert\")]\r\n\r\n    def convert(self) -> list[Data]:\r\n        raw = self.crawl_data.data.get(\"results\", {})\r\n        pages = raw.get(\"data\", [])\r\n        return [\r\n            Data(\r\n                text=page.get(\"markdown\", \"\"),\r\n                data={\r\n                    \"source_url\": page.get(\"metadata\", {}).get(\"source_url\", \"\"),\r\n                    \"title\": page.get(\"metadata\", {}).get(\"title\", \"\"),\r\n                },\r\n            )\r\n            for page in pages\r\n        ]"
+              },
+              "crawl_data": {
+                "_input_type": "JSONInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Crawl Data",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Data",
+                  "JSON"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "crawl_data",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "FirecrawlResultsToDataList"
+        },
+        "dragging": false,
+        "id": "CustomComponent-VqSim",
+        "measured": {
+          "height": 140,
+          "width": 320
+        },
+        "position": {
+          "x": 3.181229828652448,
+          "y": 714.062712469738
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "SplitText-zabq1",
+          "node": {
+            "base_classes": [
+              "Table"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Split text into chunks based on specified criteria.",
+            "display_name": "Split Text",
+            "documentation": "https://docs.langflow.org/split-text",
+            "edited": false,
+            "field_order": [
+              "data_inputs",
+              "chunk_overlap",
+              "chunk_size",
+              "separator",
+              "text_key",
+              "keep_separator",
+              "clean_output"
+            ],
+            "frozen": false,
+            "icon": "scissors-line-dashed",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "859adebdf672",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "langchain_text_splitters",
+                    "version": "1.1.2"
+                  },
+                  {
+                    "name": "lfx",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 2
+              },
+              "module": "custom_components.split_text"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chunks",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "split_text",
+                "name": "dataframe",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Table",
+                "tool_mode": true,
+                "types": [
+                  "Table"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "chunk_overlap": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Chunk Overlap",
+                "dynamic": false,
+                "info": "Number of characters to overlap between chunks.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chunk_overlap",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 200
+              },
+              "chunk_size": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Chunk Size",
+                "dynamic": false,
+                "info": "The maximum length of each chunk. Text is first split by separator, then chunks are merged up to this size. Individual splits larger than this won't be further divided.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chunk_size",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 1500
+              },
+              "clean_output": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Clean Output",
+                "dynamic": false,
+                "info": "When enabled, only the text column is included in the output. Metadata columns are removed.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "clean_output",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": false
+              },
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langchain_text_splitters import CharacterTextSplitter\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import BoolInput, DropdownInput, HandleInput, IntInput, MessageTextInput, Output\nfrom lfx.schema.data import Data\nfrom lfx.schema.dataframe import DataFrame\nfrom lfx.schema.message import Message\nfrom lfx.utils.util import unescape_string\n\n\nclass SplitTextComponent(Component):\n    display_name: str = \"Split Text\"\n    description: str = \"Split text into chunks based on specified criteria.\"\n    documentation: str = \"https://docs.langflow.org/split-text\"\n    icon = \"scissors-line-dashed\"\n    name = \"SplitText\"\n\n    inputs = [\n        HandleInput(\n            name=\"data_inputs\",\n            display_name=\"Input\",\n            info=\"The data with texts to split in chunks.\",\n            input_types=[\"Data\", \"JSON\", \"DataFrame\", \"Table\", \"Message\"],\n            required=True,\n        ),\n        IntInput(\n            name=\"chunk_overlap\",\n            display_name=\"Chunk Overlap\",\n            info=\"Number of characters to overlap between chunks.\",\n            value=200,\n        ),\n        IntInput(\n            name=\"chunk_size\",\n            display_name=\"Chunk Size\",\n            info=(\n                \"The maximum length of each chunk. Text is first split by separator, \"\n                \"then chunks are merged up to this size. \"\n                \"Individual splits larger than this won't be further divided.\"\n            ),\n            value=1000,\n        ),\n        MessageTextInput(\n            name=\"separator\",\n            display_name=\"Separator\",\n            info=(\n                \"The character to split on. Use \\\\n for newline. \"\n                \"Examples: \\\\n\\\\n for paragraphs, \\\\n for lines, . for sentences\"\n            ),\n            value=\"\\n\",\n        ),\n        MessageTextInput(\n            name=\"text_key\",\n            display_name=\"Text Key\",\n            info=\"The key to use for the text column.\",\n            value=\"text\",\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"keep_separator\",\n            display_name=\"Keep Separator\",\n            info=\"Whether to keep the separator in the output chunks and where to place it.\",\n            options=[\"False\", \"True\", \"Start\", \"End\"],\n            value=\"False\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"clean_output\",\n            display_name=\"Clean Output\",\n            info=\"When enabled, only the text column is included in the output. Metadata columns are removed.\",\n            value=False,\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Chunks\", name=\"dataframe\", method=\"split_text\"),\n    ]\n\n    def _docs_to_data(self, docs, *, clean: bool = False) -> list[Data]:\n        return [\n            Data(text=doc.page_content) if clean else Data(text=doc.page_content, data=doc.metadata) for doc in docs\n        ]\n\n    def _fix_separator(self, separator: str) -> str:\n        \"\"\"Fix common separator issues and convert to proper format.\"\"\"\n        if separator == \"/n\":\n            return \"\\n\"\n        if separator == \"/t\":\n            return \"\\t\"\n        return separator\n\n    def split_text_base(self):\n        separator = self._fix_separator(self.separator)\n        separator = unescape_string(separator)\n\n        if isinstance(self.data_inputs, DataFrame):\n            if not len(self.data_inputs):\n                msg = \"DataFrame is empty\"\n                raise TypeError(msg)\n\n            self.data_inputs.text_key = self.text_key\n            try:\n                documents = self.data_inputs.to_lc_documents()\n            except Exception as e:\n                msg = f\"Error converting DataFrame to documents: {e}\"\n                raise TypeError(msg) from e\n        elif isinstance(self.data_inputs, Message):\n            self.data_inputs = [self.data_inputs.to_data()]\n            return self.split_text_base()\n        else:\n            if not self.data_inputs:\n                msg = \"No data inputs provided\"\n                raise TypeError(msg)\n\n            documents = []\n            if isinstance(self.data_inputs, Data):\n                self.data_inputs.text_key = self.text_key\n                documents = [self.data_inputs.to_lc_document()]\n            else:\n                try:\n                    documents = [input_.to_lc_document() for input_ in self.data_inputs if isinstance(input_, Data)]\n                    if not documents:\n                        msg = f\"No valid Data inputs found in {type(self.data_inputs)}\"\n                        raise TypeError(msg)\n                except AttributeError as e:\n                    msg = f\"Invalid input type in collection: {e}\"\n                    raise TypeError(msg) from e\n        try:\n            # Convert string 'False'/'True' to boolean\n            keep_sep = self.keep_separator\n            if isinstance(keep_sep, str):\n                if keep_sep.lower() == \"false\":\n                    keep_sep = False\n                elif keep_sep.lower() == \"true\":\n                    keep_sep = True\n                # 'start' and 'end' are kept as strings\n\n            splitter = CharacterTextSplitter(\n                chunk_overlap=self.chunk_overlap,\n                chunk_size=self.chunk_size,\n                separator=separator,\n                keep_separator=keep_sep,\n            )\n            return splitter.split_documents(documents)\n        except Exception as e:\n            msg = f\"Error splitting text: {e}\"\n            raise TypeError(msg) from e\n\n    def split_text(self) -> DataFrame:\n        docs = self.split_text_base()\n        df = DataFrame(self._docs_to_data(docs, clean=self.clean_output))\n        return df if self.clean_output else df.smart_column_order()\n"
+              },
+              "data_inputs": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "The data with texts to split in chunks.",
+                "input_types": [
+                  "Data",
+                  "JSON",
+                  "DataFrame",
+                  "Table",
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "data_inputs",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "keep_separator": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "api_editable": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Keep Separator",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Whether to keep the separator in the output chunks and where to place it.",
+                "name": "keep_separator",
+                "options": [
+                  "False",
+                  "True",
+                  "Start",
+                  "End"
+                ],
+                "options_metadata": [],
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "str",
+                "value": "False"
+              },
+              "separator": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Separator",
+                "dynamic": false,
+                "info": "The character to split on. Use \\n for newline. Examples: \\n\\n for paragraphs, \\n for lines, . for sentences",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "separator",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "\\n\\n"
+              },
+              "text_key": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Text Key",
+                "dynamic": false,
+                "info": "The key to use for the text column.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "text_key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "text"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "SplitText"
+        },
+        "dragging": false,
+        "id": "SplitText-zabq1",
+        "measured": {
+          "height": 414,
+          "width": 320
+        },
+        "position": {
+          "x": 364.05963187735057,
+          "y": 714.888752655016
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "EmbeddingModel-ALHoa",
+          "node": {
+            "base_classes": [
+              "Embeddings"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings using a specified provider.",
+            "display_name": "Embedding Model",
+            "documentation": "https://docs.langflow.org/components-embedding-models",
+            "edited": false,
+            "field_order": [
+              "model",
+              "model_name",
+              "provider",
+              "api_key",
+              "api_base",
+              "base_url_ibm_watsonx",
+              "project_id",
+              "ollama_base_url",
+              "dimensions",
+              "chunk_size",
+              "request_timeout",
+              "max_retries",
+              "show_progress_bar",
+              "model_kwargs",
+              "truncate_input_tokens",
+              "input_text"
+            ],
+            "frozen": false,
+            "icon": "binary",
+            "last_updated": "2026-08-20T03:31:26.591Z",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "408487f1431c",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": null
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "lfx.components.models_and_agents.embedding_model.EmbeddingModelComponent"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embedding Model",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "build_embeddings",
+                "name": "embeddings",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Embeddings",
+                "tool_mode": true,
+                "types": [
+                  "Embeddings"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_frontend_node_flow_id": {
+                "value": "8986e90a-a5e0-4879-8499-98f11a0a74bf"
+              },
+              "_frontend_node_folder_id": {
+                "value": "f43c5f3f-39fc-4120-af79-d8b44a392a2c"
+              },
+              "_type": "Component",
+              "api_base": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "API Base URL",
+                "dynamic": false,
+                "info": "Base URL for the API. Leave empty for default.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "api_base",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "API Key",
+                "dynamic": false,
+                "info": "Overrides global provider settings. Leave blank to use your pre-configured API Key.",
+                "input_types": [],
+                "load_from_db": true,
+                "name": "api_key",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "GOOGLE_API_KEY"
+              },
+              "base_url_ibm_watsonx": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "api_editable": false,
+                "combobox": true,
+                "dialog_inputs": {},
+                "display_name": "watsonx API Endpoint",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The base URL of the API (IBM watsonx.ai only)",
+                "name": "base_url_ibm_watsonx",
+                "options": [
+                  "https://us-south.ml.cloud.ibm.com",
+                  "https://eu-de.ml.cloud.ibm.com",
+                  "https://eu-gb.ml.cloud.ibm.com",
+                  "https://au-syd.ml.cloud.ibm.com",
+                  "https://jp-tok.ml.cloud.ibm.com",
+                  "https://ca-tor.ml.cloud.ibm.com"
+                ],
+                "options_metadata": [],
+                "override_skip": false,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "str",
+                "value": "https://us-south.ml.cloud.ibm.com"
+              },
+              "chunk_size": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Chunk Size",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chunk_size",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 1000
+              },
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.base.embeddings.model import LCEmbeddingsModel\nfrom lfx.base.models.unified_models import (\n    get_embedding_model_options,\n    get_embeddings,\n    handle_model_input_update,\n)\nfrom lfx.base.models.watsonx_constants import IBM_WATSONX_URLS\nfrom lfx.components.models_and_agents.model_selection import apply_model_overrides\nfrom lfx.field_typing import Embeddings\nfrom lfx.io import (\n    BoolInput,\n    DictInput,\n    DropdownInput,\n    FloatInput,\n    IntInput,\n    MessageTextInput,\n    ModelInput,\n    SecretStrInput,\n    StrInput,\n)\n\nDEFAULT_OLLAMA_URL = \"http://localhost:11434\"\n\n\nclass EmbeddingModelComponent(LCEmbeddingsModel):\n    display_name = \"Embedding Model\"\n    description = \"Generate embeddings using a specified provider.\"\n    documentation: str = \"https://docs.langflow.org/components-embedding-models\"\n    icon = \"binary\"\n    name = \"EmbeddingModel\"\n    category = \"models\"\n\n    def update_build_config(self, build_config: dict, field_value: str, field_name: str | None = None):\n        \"\"\"Dynamically update build config with user-filtered model options.\"\"\"\n        return handle_model_input_update(\n            self,\n            dict(build_config),\n            field_value,\n            field_name,\n            cache_key_prefix=\"embedding_model_options\",\n            get_options_func=get_embedding_model_options,\n        )\n\n    inputs = [\n        ModelInput(\n            name=\"model\",\n            display_name=\"Embedding Model\",\n            info=\"Select your model provider\",\n            real_time_refresh=True,\n            required=True,\n            model_type=\"embedding\",\n            input_types=[\"Embeddings\"],  # Override default to accept Embeddings instead of LanguageModel\n        ),\n        StrInput(\n            name=\"model_name\",\n            display_name=\"Model Name Override\",\n            info=(\n                \"Optional embedding model name to use instead of the selected model. \"\n                \"Can be set from a global variable for runtime model selection.\"\n            ),\n            advanced=True,\n            load_from_db=False,\n        ),\n        StrInput(\n            name=\"provider\",\n            display_name=\"Provider Override\",\n            info=(\n                \"Optional provider to use with Model Name Override. Leave blank to use the selected model's provider.\"\n            ),\n            advanced=True,\n            load_from_db=False,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"API Key\",\n            info=\"Overrides global provider settings. Leave blank to use your pre-configured API Key.\",\n            real_time_refresh=True,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"api_base\",\n            display_name=\"API Base URL\",\n            info=\"Base URL for the API. Leave empty for default.\",\n            advanced=True,\n        ),\n        # Watson-specific inputs\n        DropdownInput(\n            name=\"base_url_ibm_watsonx\",\n            display_name=\"watsonx API Endpoint\",\n            info=\"The base URL of the API (IBM watsonx.ai only)\",\n            options=IBM_WATSONX_URLS,\n            value=IBM_WATSONX_URLS[0],\n            combobox=True,\n            show=False,\n            real_time_refresh=True,\n        ),\n        MessageTextInput(\n            name=\"project_id\",\n            display_name=\"Project ID\",\n            info=\"IBM watsonx.ai Project ID (required for IBM watsonx.ai)\",\n            show=False,\n        ),\n        # Ollama-specific input\n        StrInput(\n            name=\"ollama_base_url\",\n            display_name=\"Ollama API URL\",\n            info=f\"Endpoint of the Ollama API (Ollama only). Defaults to {DEFAULT_OLLAMA_URL}\",\n            value=DEFAULT_OLLAMA_URL,\n            show=False,\n            real_time_refresh=True,\n        ),\n        IntInput(\n            name=\"dimensions\",\n            display_name=\"Dimensions\",\n            info=\"The number of dimensions the resulting output embeddings should have. \"\n            \"Only supported by certain models.\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"chunk_size\",\n            display_name=\"Chunk Size\",\n            advanced=True,\n            value=1000,\n        ),\n        FloatInput(\n            name=\"request_timeout\",\n            display_name=\"Request Timeout\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"max_retries\",\n            display_name=\"Max Retries\",\n            advanced=True,\n            value=3,\n        ),\n        BoolInput(\n            name=\"show_progress_bar\",\n            display_name=\"Show Progress Bar\",\n            advanced=True,\n        ),\n        DictInput(\n            name=\"model_kwargs\",\n            display_name=\"Model Kwargs\",\n            advanced=True,\n            info=(\n                \"Additional keyword arguments to pass to the model. Only used by providers that support this parameter \"\n                \"(e.g. OpenAI, Google Generative AI). \"\n                \"Ignored for providers that do not include it in their parameter mapping.\"\n            ),\n        ),\n        IntInput(\n            name=\"truncate_input_tokens\",\n            display_name=\"Truncate Input Tokens\",\n            advanced=True,\n            value=200,\n            show=False,\n        ),\n        BoolInput(\n            name=\"input_text\",\n            display_name=\"Include the original text in the output\",\n            value=True,\n            advanced=True,\n            show=False,\n        ),\n    ]\n\n    def build_embeddings(self) -> Embeddings:\n        \"\"\"Build and return an embeddings instance based on the selected model.\"\"\"\n        model = apply_model_overrides(\n            self.model,\n            model_name=getattr(self, \"model_name\", None),\n            provider=getattr(self, \"provider\", None),\n            user_id=self.user_id,\n            get_options=get_embedding_model_options,\n        )\n        return get_embeddings(\n            model=model,\n            user_id=self.user_id,\n            api_key=self.api_key,\n            api_base=self.api_base,\n            dimensions=self.dimensions,\n            chunk_size=self.chunk_size,\n            request_timeout=self.request_timeout,\n            max_retries=self.max_retries,\n            show_progress_bar=self.show_progress_bar,\n            model_kwargs=self.model_kwargs,\n            watsonx_url=getattr(self, \"base_url_ibm_watsonx\", None),\n            watsonx_project_id=getattr(self, \"project_id\", None),\n            watsonx_truncate_input_tokens=getattr(self, \"truncate_input_tokens\", None),\n            watsonx_input_text=getattr(self, \"input_text\", None),\n            ollama_base_url=getattr(self, \"ollama_base_url\", None),\n        )\n"
+              },
+              "dimensions": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Dimensions",
+                "dynamic": false,
+                "info": "The number of dimensions the resulting output embeddings should have. Only supported by certain models.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "dimensions",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 0
+              },
+              "input_text": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Include the original text in the output",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_text",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": true
+              },
+              "is_refresh": true,
+              "max_retries": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Max Retries",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_retries",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 3
+              },
+              "model": {
+                "_input_type": "ModelInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Embedding Model",
+                "dynamic": false,
+                "external_options": {
+                  "fields": {
+                    "data": {
+                      "node": {
+                        "display_name": "Connect other models",
+                        "icon": "CornerDownLeft",
+                        "name": "connect_other_models"
+                      }
+                    }
+                  }
+                },
+                "info": "Select your model provider",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "model_type": "embedding",
+                "name": "model",
+                "options": [
+                  {
+                    "category": "Google Generative AI",
+                    "icon": "GoogleGenerativeAI",
+                    "metadata": {
+                      "embedding_class": "GoogleGenerativeAIEmbeddings",
+                      "model_type": "embeddings",
+                      "param_mapping": {
+                        "api_key": "google_api_key",
+                        "dimensions": "output_dimensionality",
+                        "model": "model",
+                        "model_kwargs": "client_options",
+                        "request_timeout": "request_options"
+                      }
+                    },
+                    "name": "gemini-embedding-2",
+                    "provider": "Google Generative AI"
+                  },
+                  {
+                    "category": "Google Generative AI",
+                    "icon": "GoogleGenerativeAI",
+                    "metadata": {
+                      "embedding_class": "GoogleGenerativeAIEmbeddings",
+                      "model_type": "embeddings",
+                      "param_mapping": {
+                        "api_key": "google_api_key",
+                        "dimensions": "output_dimensionality",
+                        "model": "model",
+                        "model_kwargs": "client_options",
+                        "request_timeout": "request_options"
+                      }
+                    },
+                    "name": "models/gemini-embedding-001",
+                    "provider": "Google Generative AI"
+                  }
+                ],
+                "override_skip": false,
+                "placeholder": "Setup Provider",
+                "real_time_refresh": true,
+                "refresh_button": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "track_in_telemetry": false,
+                "type": "model",
+                "value": [
+                  {
+                    "category": "Google Generative AI",
+                    "icon": "GoogleGenerativeAI",
+                    "metadata": {
+                      "embedding_class": "GoogleGenerativeAIEmbeddings",
+                      "model_type": "embeddings",
+                      "param_mapping": {
+                        "api_key": "google_api_key",
+                        "dimensions": "output_dimensionality",
+                        "model": "model",
+                        "model_kwargs": "client_options",
+                        "request_timeout": "request_options"
+                      }
+                    },
+                    "name": "gemini-embedding-2",
+                    "provider": "Google Generative AI"
+                  }
+                ]
+              },
+              "model_kwargs": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Model Kwargs",
+                "dynamic": false,
+                "info": "Additional keyword arguments to pass to the model. Only used by providers that support this parameter (e.g. OpenAI, Google Generative AI). Ignored for providers that do not include it in their parameter mapping.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "model_kwargs",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "track_in_telemetry": false,
+                "type": "dict",
+                "value": {}
+              },
+              "model_name": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Model Name Override",
+                "dynamic": false,
+                "info": "Optional embedding model name to use instead of the selected model. Can be set from a global variable for runtime model selection.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "model_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "ollama_base_url": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Ollama API URL",
+                "dynamic": false,
+                "info": "Endpoint of the Ollama API (Ollama only). Defaults to http://localhost:11434",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "ollama_base_url",
+                "override_skip": false,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "http://localhost:11434"
+              },
+              "project_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Project ID",
+                "dynamic": false,
+                "info": "IBM watsonx.ai Project ID (required for IBM watsonx.ai)",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "project_id",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "provider": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Provider Override",
+                "dynamic": false,
+                "info": "Optional provider to use with Model Name Override. Leave blank to use the selected model's provider.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "provider",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "request_timeout": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Request Timeout",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "request_timeout",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "float",
+                "value": ""
+              },
+              "show_progress_bar": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Show Progress Bar",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "show_progress_bar",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": false
+              },
+              "truncate_input_tokens": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Truncate Input Tokens",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "truncate_input_tokens",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 200
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "EmbeddingModel"
+        },
+        "dragging": false,
+        "id": "EmbeddingModel-ALHoa",
+        "measured": {
+          "height": 206,
+          "width": 320
+        },
+        "position": {
+          "x": 364.05706342472996,
+          "y": 1153.504445797383
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-p5H2s",
+          "node": {
+            "base_classes": [
+              "JSON"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Build Crawler Options (maxDepth, limit) as a Data object for Firecrawl.",
+            "display_name": "Crawler Options Builder",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "max_depth",
+              "limit"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "4a5bb733e14b",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.crawler_options_builder"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Data",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "build",
+                "name": "data_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "JSON",
+                "tool_mode": true,
+                "types": [
+                  "JSON"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.custom.custom_component.component import Component\r\nfrom lfx.io import Output, IntInput\r\nfrom lfx.schema.data import Data\r\n\r\n\r\nclass CrawlerOptionsBuilder(Component):\r\n    display_name = \"Crawler Options Builder\"\r\n    description = \"Build Crawler Options (maxDepth, limit) as a Data object for Firecrawl.\"\r\n\r\n    inputs = [\r\n        IntInput(\r\n            name=\"max_depth\",\r\n            display_name=\"Max Depth\",\r\n            value=3,\r\n            info=\"Maximum crawl depth from the starting URL.\",\r\n        ),\r\n        IntInput(\r\n            name=\"limit\",\r\n            display_name=\"Limit\",\r\n            value=50,\r\n            info=\"Maximum number of pages to crawl.\",\r\n        ),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Data\", name=\"data_out\", method=\"build\"),\r\n    ]\r\n\r\n    def build(self) -> Data:\r\n        return Data(data={\"maxDepth\": self.max_depth, \"limit\": self.limit})"
+              },
+              "limit": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Limit",
+                "dynamic": false,
+                "info": "Maximum number of pages to crawl.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "limit",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 20
+              },
+              "max_depth": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Max Depth",
+                "dynamic": false,
+                "info": "Maximum crawl depth from the starting URL.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_depth",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "int",
+                "value": 3
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "CrawlerOptionsBuilder"
+        },
+        "dragging": false,
+        "id": "CustomComponent-p5H2s",
+        "measured": {
+          "height": 304,
+          "width": 320
+        },
+        "position": {
+          "x": -766.9302387969547,
+          "y": 1019.3436600978214
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-FA1Zj",
+          "node": {
+            "base_classes": [
+              "JSON"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Build Scrape Options (onlyMainContent, format) as a Data object for Firecrawl.",
+            "display_name": "Scrape Options Builder",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "only_main_content",
+              "format"
+            ],
+            "frozen": false,
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "9e10c35faf14",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.scrape_options_builder"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Data",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "build",
+                "name": "data_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "JSON",
+                "tool_mode": true,
+                "types": [
+                  "JSON"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.custom.custom_component.component import Component\r\nfrom lfx.io import Output, BoolInput, DropdownInput\r\nfrom lfx.schema.data import Data\r\n\r\n\r\nclass ScrapeOptionsBuilder(Component):\r\n    display_name = \"Scrape Options Builder\"\r\n    description = \"Build Scrape Options (onlyMainContent, format) as a Data object for Firecrawl.\"\r\n\r\n    inputs = [\r\n        BoolInput(\r\n            name=\"only_main_content\",\r\n            display_name=\"Only Main Content\",\r\n            value=True,\r\n            info=\"Extract only the main content, excluding nav/footer/ads.\",\r\n        ),\r\n        DropdownInput(\r\n            name=\"format\",\r\n            display_name=\"Format\",\r\n            options=[\"markdown\", \"html\"],\r\n            value=\"markdown\",\r\n            info=\"Output format for the scraped content.\",\r\n        ),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Data\", name=\"data_out\", method=\"build\"),\r\n    ]\r\n\r\n    def build(self) -> Data:\r\n        return Data(data={\r\n            \"onlyMainContent\": self.only_main_content,\r\n            \"formats\": [self.format],\r\n        })"
+              },
+              "format": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "api_editable": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Format",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Output format for the scraped content.",
+                "name": "format",
+                "options": [
+                  "markdown",
+                  "html"
+                ],
+                "options_metadata": [],
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "str",
+                "value": "markdown"
+              },
+              "only_main_content": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Only Main Content",
+                "dynamic": false,
+                "info": "Extract only the main content, excluding nav/footer/ads.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "only_main_content",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ScrapeOptionsBuilder"
+        },
+        "dragging": false,
+        "id": "CustomComponent-FA1Zj",
+        "measured": {
+          "height": 264,
+          "width": 320
+        },
+        "position": {
+          "x": -764.9571795683369,
+          "y": 1351.6378571915425
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-xjzjF",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "個別入力された設定値をファイルに書き込む",
+            "display_name": "Global Config Create",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "prefix_global_value",
+              "postgresql_host",
+              "postgresql_port",
+              "postgresql_database",
+              "postgresql_username",
+              "postgresql_password",
+              "table_name",
+              "target_url"
+            ],
+            "frozen": false,
+            "icon": "settings",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "fb1a4b692c71",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "langflow",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.global_config_create"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Status",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "write_config",
+                "name": "status_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\r\nimport os\r\nfrom langflow.custom import Component\r\nfrom langflow.io import StrInput, SecretStrInput, MultilineInput, Output\r\nfrom langflow.schema.message import Message\r\n\r\nGLOBAL_CONFIG_FILE = \"/app/data/global_config.json\"\r\n\r\n\r\nclass GlobalConfigCreate(Component):\r\n    display_name = \"Global Config Create\"\r\n    description = \"個別入力された設定値をファイルに書き込む\"\r\n    icon = \"settings\"\r\n\r\n    inputs = [\r\n        StrInput(\r\n            name=\"prefix_global_value\",\r\n            display_name=\"Prefix Global Value\",\r\n            value=\"prefix\",\r\n            info=\"プリフィックスとして使用(英数字と_のみ推奨)\",\r\n            required=True\r\n        ),\r\n        StrInput(name=\"postgresql_host\", display_name=\"PostgreSQL Host\", value=\"pgvector\"),\r\n        StrInput(name=\"postgresql_port\", display_name=\"PostgreSQL Port\", value=\"5432\"),\r\n        StrInput(name=\"postgresql_database\", display_name=\"PostgreSQL Database\", value=\"ragdb\"),\r\n        StrInput(name=\"postgresql_username\", display_name=\"PostgreSQL Username\", value=\"postgres\"),\r\n        SecretStrInput(name=\"postgresql_password\", display_name=\"PostgreSQL Password\"),\r\n        StrInput(name=\"table_name\", display_name=\"Table Name\", value=\"ishigaki\"),\r\n        MultilineInput(name=\"target_url\", display_name=\"Target URL\", required=True, value=\"https://www.city.ishigaki.okinawa.jp/\"),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Status\", name=\"status_out\", method=\"write_config\"),\r\n    ]\r\n\r\n    def write_config(self) -> Message:\r\n        import re\r\n\r\n        prefix = re.sub(r\"\\s+\", \"_\", self.prefix_global_value.strip())\r\n        prefix = re.sub(r\"[^a-zA-Z0-9_]\", \"\", prefix).lower()\r\n        if not prefix:\r\n            prefix = \"prefix\"\r\n\r\n        config = {\r\n            f\"{prefix}_postgresql_host\": self.postgresql_host,\r\n            f\"{prefix}_postgresql_port\": self.postgresql_port,\r\n            f\"{prefix}_postgresql_database\": self.postgresql_database,\r\n            f\"{prefix}_postgresql_username\": self.postgresql_username,\r\n            f\"{prefix}_postgresql_password\": self.postgresql_password,\r\n            f\"{prefix}_table_name\": self.table_name,\r\n            f\"{prefix}_target_url\": self.target_url,\r\n        }\r\n\r\n        with open(GLOBAL_CONFIG_FILE, \"w\") as f:\r\n            json.dump(config, f, ensure_ascii=False)\r\n\r\n        return Message(text=f\"Wrote {len(config)} keys: {list(config.keys())}\")"
+              },
+              "postgresql_database": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "PostgreSQL Database",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "postgresql_database",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "ragdb"
+              },
+              "postgresql_host": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "PostgreSQL Host",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "postgresql_host",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "pgvector"
+              },
+              "postgresql_password": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "PostgreSQL Password",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "postgresql_password",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "root"
+              },
+              "postgresql_port": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "PostgreSQL Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "postgresql_port",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "5432"
+              },
+              "postgresql_username": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "PostgreSQL Username",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "postgresql_username",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "postgres"
+              },
+              "prefix_global_value": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Prefix Global Value",
+                "dynamic": false,
+                "info": "プリフィックスとして使用(英数字と_のみ推奨)",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prefix_global_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "rag"
+              },
+              "table_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Table Name",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "table_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "knowledge"
+              },
+              "target_url": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "ai_enabled": false,
+                "api_editable": false,
+                "copy_field": false,
+                "display_name": "Target URL",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "target_url",
+                "override_skip": false,
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "https://www.city.ishigaki.okinawa.jp"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "GlobalConfigCreate"
+        },
+        "dragging": false,
+        "id": "CustomComponent-xjzjF",
+        "measured": {
+          "height": 780,
+          "width": 320
+        },
+        "position": {
+          "x": -2119.0790976480107,
+          "y": 704.9945176525184
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "GlobalConfigRead-vn09q",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "ファイルからGlobal Configの値を読み取る",
+            "display_name": "Global Config Read",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "prefix_global_value",
+              "key"
+            ],
+            "frozen": false,
+            "icon": "search",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "92e7e0fd7a6c",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "langflow",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.global_config_read"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Value",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "read",
+                "name": "value_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\r\nimport os\r\nfrom langflow.custom import Component\r\nfrom langflow.io import StrInput, Output\r\nfrom langflow.schema.message import Message\r\n\r\nGLOBAL_CONFIG_FILE = \"/app/data/global_config.json\"\r\n\r\nclass GlobalConfigRead(Component):\r\n    display_name = \"Global Config Read\"\r\n    description = \"ファイルからGlobal Configの値を読み取る\"\r\n    icon = \"search\"\r\n\r\n    inputs = [\r\n        StrInput(\r\n            name=\"prefix_global_value\",\r\n            display_name=\"Prefix Global Value\",\r\n            value=\"prefix\",\r\n            info=\"書き込み時と同じ名前を指定\",\r\n            required=True,\r\n            advanced=True,\r\n\r\n        ),\r\n        StrInput(\r\n            name=\"key\",\r\n            display_name=\"Key\",\r\n            value=\"opensearch_url\",\r\n        ),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Value\", name=\"value_out\", method=\"read\"),\r\n    ]\r\n\r\n    def read(self) -> Message:\r\n        if not os.path.exists(GLOBAL_CONFIG_FILE):\r\n            return Message(text=\"FILE_NOT_FOUND\")\r\n\r\n        import re\r\n\r\n        prefix = re.sub(r\"\\s+\", \"_\", self.prefix_global_value.strip())\r\n        prefix = re.sub(r\"[^a-zA-Z0-9_]\", \"\", prefix).lower()\r\n\r\n        with open(GLOBAL_CONFIG_FILE, \"r\") as f:\r\n            data = json.load(f)\r\n\r\n        val = data.get(f\"{prefix}_{self.key}\", \"NOT_FOUND\")\r\n        return Message(text=f\"{val}\")"
+              },
+              "key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Key",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "postgresql_host"
+              },
+              "prefix_global_value": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Prefix Global Value",
+                "dynamic": false,
+                "info": "書き込み時と同じ名前を指定",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prefix_global_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "rag"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "GlobalConfigRead"
+        },
+        "dragging": false,
+        "id": "GlobalConfigRead-vn09q",
+        "measured": {
+          "height": 206,
+          "width": 320
+        },
+        "position": {
+          "x": 365.70105007766915,
+          "y": 1381.3998336281063
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "GlobalConfigRead-0tiP3",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "ファイルからGlobal Configの値を読み取る",
+            "display_name": "Global Config Read",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "prefix_global_value",
+              "key"
+            ],
+            "frozen": false,
+            "icon": "search",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "92e7e0fd7a6c",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "langflow",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.global_config_read"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Value",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "read",
+                "name": "value_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\r\nimport os\r\nfrom langflow.custom import Component\r\nfrom langflow.io import StrInput, Output\r\nfrom langflow.schema.message import Message\r\n\r\nGLOBAL_CONFIG_FILE = \"/app/data/global_config.json\"\r\n\r\nclass GlobalConfigRead(Component):\r\n    display_name = \"Global Config Read\"\r\n    description = \"ファイルからGlobal Configの値を読み取る\"\r\n    icon = \"search\"\r\n\r\n    inputs = [\r\n        StrInput(\r\n            name=\"prefix_global_value\",\r\n            display_name=\"Prefix Global Value\",\r\n            value=\"prefix\",\r\n            info=\"書き込み時と同じ名前を指定\",\r\n            required=True,\r\n            advanced=True,\r\n\r\n        ),\r\n        StrInput(\r\n            name=\"key\",\r\n            display_name=\"Key\",\r\n            value=\"opensearch_url\",\r\n        ),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Value\", name=\"value_out\", method=\"read\"),\r\n    ]\r\n\r\n    def read(self) -> Message:\r\n        if not os.path.exists(GLOBAL_CONFIG_FILE):\r\n            return Message(text=\"FILE_NOT_FOUND\")\r\n\r\n        import re\r\n\r\n        prefix = re.sub(r\"\\s+\", \"_\", self.prefix_global_value.strip())\r\n        prefix = re.sub(r\"[^a-zA-Z0-9_]\", \"\", prefix).lower()\r\n\r\n        with open(GLOBAL_CONFIG_FILE, \"r\") as f:\r\n            data = json.load(f)\r\n\r\n        val = data.get(f\"{prefix}_{self.key}\", \"NOT_FOUND\")\r\n        return Message(text=f\"{val}\")"
+              },
+              "key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Key",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "table_name"
+              },
+              "prefix_global_value": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Prefix Global Value",
+                "dynamic": false,
+                "info": "書き込み時と同じ名前を指定",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prefix_global_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "rag"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "GlobalConfigRead"
+        },
+        "dragging": false,
+        "id": "GlobalConfigRead-0tiP3",
+        "measured": {
+          "height": 206,
+          "width": 320
+        },
+        "position": {
+          "x": 366.1819593436201,
+          "y": 1605.0429696134374
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "GlobalConfigRead-Xl5b4",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "ファイルからGlobal Configの値を読み取る",
+            "display_name": "Global Config Read",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "prefix_global_value",
+              "key"
+            ],
+            "frozen": false,
+            "icon": "search",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "92e7e0fd7a6c",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "langflow",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.global_config_read"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Value",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "read",
+                "name": "value_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\r\nimport os\r\nfrom langflow.custom import Component\r\nfrom langflow.io import StrInput, Output\r\nfrom langflow.schema.message import Message\r\n\r\nGLOBAL_CONFIG_FILE = \"/app/data/global_config.json\"\r\n\r\nclass GlobalConfigRead(Component):\r\n    display_name = \"Global Config Read\"\r\n    description = \"ファイルからGlobal Configの値を読み取る\"\r\n    icon = \"search\"\r\n\r\n    inputs = [\r\n        StrInput(\r\n            name=\"prefix_global_value\",\r\n            display_name=\"Prefix Global Value\",\r\n            value=\"prefix\",\r\n            info=\"書き込み時と同じ名前を指定\",\r\n            required=True,\r\n            advanced=True,\r\n\r\n        ),\r\n        StrInput(\r\n            name=\"key\",\r\n            display_name=\"Key\",\r\n            value=\"opensearch_url\",\r\n        ),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Value\", name=\"value_out\", method=\"read\"),\r\n    ]\r\n\r\n    def read(self) -> Message:\r\n        if not os.path.exists(GLOBAL_CONFIG_FILE):\r\n            return Message(text=\"FILE_NOT_FOUND\")\r\n\r\n        import re\r\n\r\n        prefix = re.sub(r\"\\s+\", \"_\", self.prefix_global_value.strip())\r\n        prefix = re.sub(r\"[^a-zA-Z0-9_]\", \"\", prefix).lower()\r\n\r\n        with open(GLOBAL_CONFIG_FILE, \"r\") as f:\r\n            data = json.load(f)\r\n\r\n        val = data.get(f\"{prefix}_{self.key}\", \"NOT_FOUND\")\r\n        return Message(text=f\"{val}\")"
+              },
+              "key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Key",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "target_url"
+              },
+              "prefix_global_value": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Prefix Global Value",
+                "dynamic": false,
+                "info": "書き込み時と同じ名前を指定",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prefix_global_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "rag"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "GlobalConfigRead"
+        },
+        "dragging": false,
+        "id": "GlobalConfigRead-Xl5b4",
+        "measured": {
+          "height": 206,
+          "width": 320
+        },
+        "position": {
+          "x": -769.8092200982181,
+          "y": 711.6407489056726
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-NggvI",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "指定したTable Nameのデータを全削除する(テーブル構造は保持)",
+            "display_name": "Truncate PostgreSQL Table",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "host",
+              "port",
+              "database",
+              "table_name",
+              "username",
+              "password"
+            ],
+            "frozen": false,
+            "icon": "trash-2",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "592436eddc7d",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.0"
+                  },
+                  {
+                    "name": "psycopg2",
+                    "version": "2.9.12"
+                  }
+                ],
+                "total_dependencies": 2
+              },
+              "module": "custom_components.truncate_postgresql_table"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Result",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "truncate_table",
+                "name": "result_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.custom.custom_component.component import Component\r\nfrom lfx.io import StrInput, SecretStrInput, MessageTextInput, Output\r\nfrom lfx.schema.message import Message\r\n\r\n\r\nclass TruncatePostgresTable(Component):\r\n    display_name = \"Truncate PostgreSQL Table\"\r\n    description = \"指定したTable Nameのデータを全削除する(テーブル構造は保持)\"\r\n    icon = \"trash-2\"\r\n\r\n    inputs = [\r\n        MessageTextInput(name=\"host\", display_name=\"Host\", value=\"pgvector\"),\r\n        StrInput(name=\"port\", display_name=\"Port\", value=\"5432\"),\r\n        StrInput(name=\"database\", display_name=\"Database\", value=\"ragdb\"),\r\n        MessageTextInput(name=\"table_name\", display_name=\"Table Name\", required=True),\r\n        StrInput(name=\"username\", display_name=\"Username\", value=\"postgres\"),\r\n        SecretStrInput(name=\"password\", display_name=\"Password\"),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Result\", name=\"result_out\", method=\"truncate_table\"),\r\n    ]\r\n\r\n    def truncate_table(self) -> Message:\r\n        import psycopg2\r\n\r\n        try:\r\n            host = str(self.host) or \"pgvector\"\r\n            port = str(self.port)\r\n            database = str(self.database)\r\n            table_name = str(self.table_name)\r\n            username = str(self.username)\r\n            password = str(self.password)\r\n\r\n            debug_info = f\"host={host!r}, db={database!r}, table={table_name!r}, user={username!r}\"\r\n\r\n            conn = psycopg2.connect(\r\n                host=host, port=port, dbname=database,\r\n                user=username, password=password,\r\n            )\r\n            conn.autocommit = True\r\n            cur = conn.cursor()\r\n\r\n            cur.execute(\r\n                \"SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = %s)\",\r\n                (table_name,)\r\n            )\r\n            exists = cur.fetchone()[0]\r\n\r\n            if not exists:\r\n                cur.close()\r\n                conn.close()\r\n                return Message(text=f\"NOT_EXIST | {debug_info}\")\r\n\r\n            # id(serial)のシーケンスもリセットする場合は RESTART IDENTITY\r\n            cur.execute(f'TRUNCATE TABLE \"{table_name}\" RESTART IDENTITY')\r\n            cur.close()\r\n            conn.close()\r\n            return Message(text=f\"Truncated table: {table_name} | {debug_info}\")\r\n\r\n        except Exception as e:\r\n            import traceback\r\n            return Message(text=f\"ERROR: {e} | TRACE: {traceback.format_exc()[:500]}\")"
+              },
+              "database": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Database",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "database",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "ragdb"
+              },
+              "host": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Host",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "host",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "password": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Password",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "password",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "root"
+              },
+              "port": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "port",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "5432"
+              },
+              "table_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Table Name",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "table_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "username": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Username",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "username",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "postgres"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TruncatePostgresTable"
+        },
+        "dragging": false,
+        "id": "CustomComponent-NggvI",
+        "measured": {
+          "height": 632,
+          "width": 320
+        },
+        "position": {
+          "x": -1275.7035844113277,
+          "y": 708.3977214673589
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "GlobalConfigRead-Z78Pl",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "ファイルからGlobal Configの値を読み取る",
+            "display_name": "Global Config Read",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "prefix_global_value",
+              "key"
+            ],
+            "frozen": false,
+            "icon": "search",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "92e7e0fd7a6c",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "langflow",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.global_config_read"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Value",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "read",
+                "name": "value_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\r\nimport os\r\nfrom langflow.custom import Component\r\nfrom langflow.io import StrInput, Output\r\nfrom langflow.schema.message import Message\r\n\r\nGLOBAL_CONFIG_FILE = \"/app/data/global_config.json\"\r\n\r\nclass GlobalConfigRead(Component):\r\n    display_name = \"Global Config Read\"\r\n    description = \"ファイルからGlobal Configの値を読み取る\"\r\n    icon = \"search\"\r\n\r\n    inputs = [\r\n        StrInput(\r\n            name=\"prefix_global_value\",\r\n            display_name=\"Prefix Global Value\",\r\n            value=\"prefix\",\r\n            info=\"書き込み時と同じ名前を指定\",\r\n            required=True,\r\n            advanced=True,\r\n\r\n        ),\r\n        StrInput(\r\n            name=\"key\",\r\n            display_name=\"Key\",\r\n            value=\"opensearch_url\",\r\n        ),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Value\", name=\"value_out\", method=\"read\"),\r\n    ]\r\n\r\n    def read(self) -> Message:\r\n        if not os.path.exists(GLOBAL_CONFIG_FILE):\r\n            return Message(text=\"FILE_NOT_FOUND\")\r\n\r\n        import re\r\n\r\n        prefix = re.sub(r\"\\s+\", \"_\", self.prefix_global_value.strip())\r\n        prefix = re.sub(r\"[^a-zA-Z0-9_]\", \"\", prefix).lower()\r\n\r\n        with open(GLOBAL_CONFIG_FILE, \"r\") as f:\r\n            data = json.load(f)\r\n\r\n        val = data.get(f\"{prefix}_{self.key}\", \"NOT_FOUND\")\r\n        return Message(text=f\"{val}\")"
+              },
+              "key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Key",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "postgresql_host"
+              },
+              "prefix_global_value": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Prefix Global Value",
+                "dynamic": false,
+                "info": "書き込み時と同じ名前を指定",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prefix_global_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "rag"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "GlobalConfigRead"
+        },
+        "dragging": false,
+        "id": "GlobalConfigRead-Z78Pl",
+        "measured": {
+          "height": 206,
+          "width": 320
+        },
+        "position": {
+          "x": -1627.5378578758516,
+          "y": 709.0295693110593
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "GlobalConfigRead-VWHn2",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "ファイルからGlobal Configの値を読み取る",
+            "display_name": "Global Config Read",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "prefix_global_value",
+              "key"
+            ],
+            "frozen": false,
+            "icon": "search",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "92e7e0fd7a6c",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "langflow",
+                    "version": "1.11.0"
+                  }
+                ],
+                "total_dependencies": 1
+              },
+              "module": "custom_components.global_config_read"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Value",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "read",
+                "name": "value_out",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\r\nimport os\r\nfrom langflow.custom import Component\r\nfrom langflow.io import StrInput, Output\r\nfrom langflow.schema.message import Message\r\n\r\nGLOBAL_CONFIG_FILE = \"/app/data/global_config.json\"\r\n\r\nclass GlobalConfigRead(Component):\r\n    display_name = \"Global Config Read\"\r\n    description = \"ファイルからGlobal Configの値を読み取る\"\r\n    icon = \"search\"\r\n\r\n    inputs = [\r\n        StrInput(\r\n            name=\"prefix_global_value\",\r\n            display_name=\"Prefix Global Value\",\r\n            value=\"prefix\",\r\n            info=\"書き込み時と同じ名前を指定\",\r\n            required=True,\r\n            advanced=True,\r\n\r\n        ),\r\n        StrInput(\r\n            name=\"key\",\r\n            display_name=\"Key\",\r\n            value=\"opensearch_url\",\r\n        ),\r\n    ]\r\n\r\n    outputs = [\r\n        Output(display_name=\"Value\", name=\"value_out\", method=\"read\"),\r\n    ]\r\n\r\n    def read(self) -> Message:\r\n        if not os.path.exists(GLOBAL_CONFIG_FILE):\r\n            return Message(text=\"FILE_NOT_FOUND\")\r\n\r\n        import re\r\n\r\n        prefix = re.sub(r\"\\s+\", \"_\", self.prefix_global_value.strip())\r\n        prefix = re.sub(r\"[^a-zA-Z0-9_]\", \"\", prefix).lower()\r\n\r\n        with open(GLOBAL_CONFIG_FILE, \"r\") as f:\r\n            data = json.load(f)\r\n\r\n        val = data.get(f\"{prefix}_{self.key}\", \"NOT_FOUND\")\r\n        return Message(text=f\"{val}\")"
+              },
+              "key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Key",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "key",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "table_name"
+              },
+              "prefix_global_value": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "api_editable": false,
+                "display_name": "Prefix Global Value",
+                "dynamic": false,
+                "info": "書き込み時と同じ名前を指定",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prefix_global_value",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "rag"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "GlobalConfigRead"
+        },
+        "dragging": false,
+        "id": "GlobalConfigRead-VWHn2",
+        "measured": {
+          "height": 206,
+          "width": 320
+        },
+        "position": {
+          "x": -1628.2912870541638,
+          "y": 952.6342298375412
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "note-usfPx",
+          "node": {
+            "description": "# 値を設定",
+            "display_name": "",
+            "documentation": "",
+            "template": {}
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 873,
+        "id": "note-usfPx",
+        "measured": {
+          "height": 873,
+          "width": 447
+        },
+        "position": {
+          "x": -2183.8669522101927,
+          "y": 632.5343819425382
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 447
+      },
+      {
+        "data": {
+          "id": "note-u6Elx",
+          "node": {
+            "description": "# RAGを初期化（任意）",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "rose"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 748,
+        "id": "note-u6Elx",
+        "measured": {
+          "height": 748,
+          "width": 761
+        },
+        "position": {
+          "x": -1669.4079899899068,
+          "y": 633.2431089418649
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 761
+      },
+      {
+        "data": {
+          "id": "note-DuuNp",
+          "node": {
+            "description": "# RAGを作成",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "amber"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 1221,
+        "id": "note-DuuNp",
+        "measured": {
+          "height": 1221,
+          "width": 2078
+        },
+        "position": {
+          "x": -833.0215446699083,
+          "y": 630.4001161444473
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 2078
+      },
+      {
+        "data": {
+          "id": "CustomComponent-XT2SR",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Split Textの出力(DataFrame)を受け取り、全チャンクをEmbedding→PostgreSQL(documentsテーブル)へ一括insertする。",
+            "display_name": "PgVector Bulk Ingest",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "chunks",
+              "embedding",
+              "host",
+              "port",
+              "database",
+              "table_name",
+              "username",
+              "password",
+              "delay_seconds"
+            ],
+            "frozen": false,
+            "icon": "database",
+            "legacy": false,
+            "lf_version": "1.11.0",
+            "metadata": {
+              "code_hash": "bb56c399220b",
+              "dependencies": {
+                "dependencies": [
+                  {
+                    "name": "lfx",
+                    "version": "1.11.0"
+                  },
+                  {
+                    "name": "psycopg2",
+                    "version": "2.9.12"
+                  }
+                ],
+                "total_dependencies": 2
+              },
+              "module": "custom_components.pgvector_bulk_ingest"
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Result",
+                "group_outputs": false,
+                "hidden": null,
+                "loop_types": null,
+                "method": "ingest",
+                "name": "result",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "chunks": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Chunks (DataFrame)",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "DataFrame",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "chunks",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "api_editable": false,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from lfx.custom.custom_component.component import Component\r\nfrom lfx.io import Output, StrInput, SecretStrInput, HandleInput, MessageTextInput\r\nfrom lfx.schema.message import Message\r\nfrom lfx.schema.dataframe import DataFrame\r\nfrom lfx.schema.data import Data\r\n\r\nclass PgVectorBulkIngest(Component):\r\n    display_name = \"PgVector Bulk Ingest\"\r\n    description = \"Split Textの出力(DataFrame)を受け取り、全チャンクをEmbedding→PostgreSQL(documentsテーブル)へ一括insertする。\"\r\n    icon = \"database\"\r\n\r\n    inputs = [\r\n        HandleInput(\r\n            name=\"chunks\",\r\n            display_name=\"Chunks (DataFrame)\",\r\n            input_types=[\"DataFrame\", \"Data\"],\r\n            required=True,\r\n        ),\r\n        HandleInput(\r\n            name=\"embedding\",\r\n            display_name=\"Embedding Model\",\r\n            input_types=[\"Embeddings\"],\r\n            required=True,\r\n        ),\r\n        MessageTextInput(name=\"host\", display_name=\"Host\", value=\"pgvector\"),\r\n        StrInput(name=\"port\", display_name=\"Port\", value=\"5432\"),\r\n        StrInput(name=\"database\", display_name=\"Database\", value=\"ragdb\"),\r\n        MessageTextInput(name=\"table_name\", display_name=\"Table Name\", value=\"knowledge\"),\r\n        StrInput(name=\"username\", display_name=\"Username\", value=\"postgres\"),\r\n        SecretStrInput(name=\"password\", display_name=\"Password\"),\r\n        StrInput(name=\"delay_seconds\", display_name=\"Delay Between Requests (sec)\", value=\"2\"),\r\n    ]\r\n\r\n\r\n    outputs = [\r\n        Output(display_name=\"Result\", name=\"result\", method=\"ingest\"),\r\n    ]\r\n\r\n    def _rows(self):\r\n        raw = self.chunks\r\n\r\n        if isinstance(raw, DataFrame):\r\n            return raw.to_dict(orient=\"records\")\r\n\r\n        if isinstance(raw, Data):\r\n            return [raw.data]\r\n\r\n        if isinstance(raw, list):\r\n            rows = []\r\n            for item in raw:\r\n                if isinstance(item, Data):\r\n                    rows.append(item.data)\r\n                elif isinstance(item, dict):\r\n                    rows.append(item)\r\n            return rows\r\n\r\n        if isinstance(raw, dict):\r\n            return [raw]\r\n\r\n        return []\r\n\r\n    def ingest(self) -> Message:\r\n        import psycopg2\r\n\r\n        host = str(self.host)\r\n        port = str(self.port)\r\n        database = str(self.database)\r\n        table_name = str(self.table_name)\r\n        username = str(self.username)\r\n        password = str(self.password)\r\n        delay = float(self.delay_seconds or 0)\r\n\r\n        rows = self._rows()\r\n\r\n        with open(\"/tmp/bulk_ingest_debug.log\", \"a\") as f:\r\n            f.write(f\"=== run start, rows={len(rows)} ===\\n\")\r\n            if rows:\r\n                f.write(f\"sample keys={list(rows[0].keys())}\\n\")\r\n\r\n        if not rows:\r\n            return Message(text=\"No rows to ingest.\")\r\n\r\n        conn = psycopg2.connect(host=host, port=port, dbname=database, user=username, password=password)\r\n        conn.autocommit = True\r\n        cur = conn.cursor()\r\n\r\n        # --- テーブル存在確認(既存documentsを想定。無ければ作成) ---\r\n        cur.execute(\r\n            \"SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = %s)\",\r\n            (table_name,),\r\n        )\r\n        exists = cur.fetchone()[0]\r\n\r\n        inserted = 0\r\n        errors = []\r\n        dim_checked = False\r\n\r\n        for i, row in enumerate(rows):\r\n            content = str(row.get(\"text\", \"\")).strip()\r\n            if not content:\r\n                continue\r\n\r\n            vector = None\r\n            for attempt in range(5):\r\n                try:\r\n                    vector = self.embedding.embed_query(content)\r\n                    break\r\n                except Exception as e:\r\n                    if \"429\" in str(e) or \"RESOURCE_EXHAUSTED\" in str(e):\r\n                        wait = 2 ** attempt\r\n                        with open(\"/tmp/bulk_ingest_debug.log\", \"a\") as f:\r\n                            f.write(f\"[{i}] rate limited, retry in {wait}s\\n\")\r\n                        time.sleep(wait)\r\n                    else:\r\n                        errors.append(f\"[{i}] embed error: {e}\")\r\n                        break\r\n\r\n            if vector is None:\r\n                continue\r\n\r\n            if not exists and not dim_checked:\r\n                dim = len(vector)\r\n                cur.execute(\"CREATE EXTENSION IF NOT EXISTS vector\")\r\n                cur.execute(f\"\"\"\r\n                    CREATE TABLE \"{table_name}\" (\r\n                        id SERIAL PRIMARY KEY,\r\n                        content TEXT,\r\n                        metadata JSONB,\r\n                        embedding VECTOR({dim})\r\n                    )\r\n                \"\"\")\r\n                exists = True\r\n                dim_checked = True\r\n\r\n            metadata = {k: v for k, v in row.items() if k != \"text\"}\r\n\r\n            cur.execute(f\"\"\"\r\n                INSERT INTO \"{table_name}\" (content, metadata, embedding)\r\n                VALUES (%s, %s, %s)\r\n            \"\"\", (content, json.dumps(metadata), vector))\r\n            inserted += 1\r\n\r\n            time.sleep(delay)\r\n\r\n        cur.close()\r\n        conn.close()\r\n\r\n        with open(\"/tmp/bulk_ingest_debug.log\", \"a\") as f:\r\n            f.write(f\"=== run end, inserted={inserted}, errors={errors} ===\\n\")\r\n\r\n        return Message(text=f\"Inserted {inserted}/{len(rows)} rows. Errors: {errors}\")"
+              },
+              "database": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Database",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "database",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "ragdb"
+              },
+              "delay_seconds": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Delay Between Requests (sec)",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "delay_seconds",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": 1
+              },
+              "embedding": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Embedding Model",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding",
+                "override_skip": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "other",
+                "value": ""
+              },
+              "host": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Host",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "host",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "password": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Password",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "password",
+                "override_skip": false,
+                "password": true,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "root"
+              },
+              "port": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "port",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "5432"
+              },
+              "table_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Table Name",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "table_name",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": ""
+              },
+              "username": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "api_editable": false,
+                "display_name": "Username",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "username",
+                "override_skip": false,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "track_in_telemetry": false,
+                "type": "str",
+                "value": "postgres"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "PgVectorBulkIngest"
+        },
+        "dragging": false,
+        "id": "CustomComponent-XT2SR",
+        "measured": {
+          "height": 818,
+          "width": 320
+        },
+        "position": {
+          "x": 856.5645764452663,
+          "y": 717.3532205749332
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "note-9xk86",
+          "node": {
+            "description": "## PgVector Bulk Ingest を実行",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "rose"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 140,
+        "id": "note-9xk86",
+        "measured": {
+          "height": 140,
+          "width": 382
+        },
+        "position": {
+          "x": 816.7998667026502,
+          "y": 659.1455821595201
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 382
+      },
+      {
+        "data": {
+          "id": "note-BfGo4",
+          "node": {
+            "description": "## 設定",
+            "display_name": "",
+            "documentation": "",
+            "template": {
+              "backgroundColor": "rose"
+            }
+          },
+          "type": "note"
+        },
+        "dragging": false,
+        "height": 689,
+        "id": "note-BfGo4",
+        "measured": {
+          "height": 689,
+          "width": 398
+        },
+        "position": {
+          "x": -807.3794618480904,
+          "y": 954.2276648870197
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 398
+      }
+    ],
+    "viewport": {
+      "x": 779.5300991567472,
+      "y": -69.1187191000621,
+      "zoom": 0.33130685842582813
+    }
+  },
+  "description": "create rag",
+  "endpoint_name": null,
+  "id": "8986e90a-a5e0-4879-8499-98f11a0a74bf",
+  "is_component": false,
+  "last_tested_version": "1.11.0",
+  "locked": false,
+  "name": "rag-pg",
+  "tags": []
+}
